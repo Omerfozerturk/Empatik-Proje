@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.casper.empatikproje.Kategori">
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButtonTeknoloji"
+        android:src="@drawable/tekno"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButtonEgitim"
+        android:src="@drawable/egitim"
+        android:layout_below="@+id/imageButtonTeknoloji"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButtonEkonomi"
+        android:src="@drawable/ekonomi"
+        android:layout_below="@id/imageButtonEgitim"/>
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButtonSpor"
+        android:src="@drawable/spor"
+        android:layout_below="@id/imageButtonEkonomi"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGit"
+        android:text="Git"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
