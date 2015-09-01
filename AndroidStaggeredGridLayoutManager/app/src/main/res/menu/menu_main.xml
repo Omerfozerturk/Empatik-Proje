@@ -1,6 +1,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:icon="@drawable/settings"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/itemSearch"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/itemSave"
+        android:icon="@drawable/save"
+        android:title="Add New"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/itemExit"
+        android:icon="@drawable/exit"
+        android:title="Exit"
+        app:showAsAction="ifRoom"/>
 </menu>
