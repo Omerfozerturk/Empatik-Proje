@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="inducesmile.com.androidstaggeredgridlayoutmanager" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +17,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.saliha.yesilyurt.androidstaggeredgridlayout.NewsList"
+            android:label="@string/title_activity_news_list" >
+        </activity>
+        <activity
+            android:name="com.saliha.yesilyurt.androidstaggeredgridlayout.NewsDetails"
+            android:label="@string/title_activity_news_details" >
+        </activity>
+        <activity
+            android:name="com.saliha.yesilyurt.androidstaggeredgridlayout.SavedNews"
+            android:label="@string/title_activity_saved_news" >
         </activity>
     </application>
 
