@@ -42,6 +42,7 @@ public class NewsDetails extends ActionBarActivity {
                 try {
                     Toast.makeText(v.getContext(), "Haber favorilere alındı.", Toast.LENGTH_SHORT).show();
                     sharedPref = getSharedPreferences("pref", 0);
+                    editor = sharedPref.edit();
                     editor.putString("url1",url1);
                     editor.commit();
                 }catch (Exception e){
@@ -56,6 +57,7 @@ public class NewsDetails extends ActionBarActivity {
                 try {
                     Toast.makeText(v.getContext(), "Haber kaydedildi.", Toast.LENGTH_SHORT).show();
                     sharedPref = getSharedPreferences("pref", 0);
+                    editor = sharedPref.edit();
                     editor.putString("url1", url1);
                     editor.commit();
                 }catch (Exception e){
