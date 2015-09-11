@@ -28,10 +28,11 @@ public class SavedNews extends ActionBarActivity {
         webView4 = (WebView) findViewById(R.id.webView4);
         webView5 = (WebView) findViewById(R.id.webView5);
 
+       
         try {
             webView1.getSettings().setJavaScriptEnabled(true);
             sharedPref = getSharedPreferences("pref", 0);
-            String url1 = sharedPref.getString("url1","");
+            final String url1 = sharedPref.getString("url1",null);
             webView1.loadUrl(url1);
         }catch (Exception e){
             e.printStackTrace();

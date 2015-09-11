@@ -40,7 +40,7 @@ public class NewsList extends ActionBarActivity {
             sharedPref = getSharedPreferences("pref",0);
 
             webView1.getSettings().setJavaScriptEnabled(true);
-            final String url1 = "https://gelecegiyazanlar.turkcell.com.tr/konu/android/egitim/android-201/bir-activityi-yeniden-yaratma";
+            final String url1 = "https://gelecegiyazanlar.turkcell.com.tr/";
             webView1.loadUrl(url1);
             webView1.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
@@ -53,7 +53,17 @@ public class NewsList extends ActionBarActivity {
             });
 
             webView2.getSettings().setJavaScriptEnabled(true);
-            webView2.loadUrl("https://gelecegiyazanlar.turkcell.com.tr/konu/android/egitim/android-201/listview-kullanimi");
+            final String url2 = "https://gelecegiyazanlar.turkcell.com.tr/";
+            webView2.loadUrl(url2);
+            webView2.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    Intent i = new Intent(NewsList.this, NewsDetails.class);
+                    i.putExtra("url2", url2);
+                    startActivity(i);
+                    return true;
+                }
+            });
         }catch (Exception e){
             e.printStackTrace();
         }

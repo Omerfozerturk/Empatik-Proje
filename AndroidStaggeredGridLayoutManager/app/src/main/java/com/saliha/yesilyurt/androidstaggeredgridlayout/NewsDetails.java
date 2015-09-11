@@ -21,7 +21,7 @@ public class NewsDetails extends ActionBarActivity {
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
     Context context;
-
+    String url1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,7 @@ public class NewsDetails extends ActionBarActivity {
         imgShare = (ImageButton) findViewById(R.id.imageButtonShare);
         webView = (WebView) findViewById(R.id.webViewDetails);
 
-        final String url1 = getIntent().getStringExtra("url1");
+        url1 = getIntent().getStringExtra("url1");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl(url1);
 
@@ -42,7 +42,7 @@ public class NewsDetails extends ActionBarActivity {
                 try {
                     Toast.makeText(v.getContext(), "Haber favorilere alındı.", Toast.LENGTH_SHORT).show();
                     sharedPref = getSharedPreferences("pref", 0);
-                    editor.putString("url1", url1);
+                    editor.putString("url1",url1);
                     editor.commit();
                 }catch (Exception e){
                     e.printStackTrace();
